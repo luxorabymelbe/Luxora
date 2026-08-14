@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxora | Luxury Curated Gifting Experience</title>
+    <title>Luxora by MelBe | Luxury Curated Gifting Experience</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,13 +88,13 @@
         }
 
         .logo-svg {
-            height: 52px;
+            height: 58px;
             width: auto;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 26px;
             list-style: none;
         }
 
@@ -194,7 +194,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 820px;
             background: rgba(255, 253, 249, 0.92);
             padding: 50px 40px;
             border: 1px solid var(--border-gold);
@@ -203,10 +203,20 @@
         }
 
         .hero h1 {
-            font-size: 3.6rem;
+            font-size: 3.5rem;
             color: var(--text-dark);
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             line-height: 1.15;
+            font-weight: 600;
+        }
+
+        .hero .brand-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
             font-weight: 600;
         }
 
@@ -356,7 +366,7 @@
             font-weight: 600;
         }
 
-        /* Custom Gift Form Container */
+        /* Forms Styling */
         .form-container {
             background-color: var(--bg-card);
             border: 1px solid var(--gold-primary);
@@ -421,6 +431,54 @@
             align-items: center;
             gap: 8px;
             font-size: 0.82rem;
+        }
+
+        /* Dedicated Contact Section / Page */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--gold-primary);
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-info-card {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 40px 30px;
+            border-radius: 4px;
+            border-top: 3px solid var(--gold-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info-card h3 {
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold-light);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            font-size: 1rem;
+            color: var(--white);
+            font-weight: 300;
         }
 
         /* How It Works */
@@ -512,7 +570,7 @@
         .about-content h2 {
             color: var(--gold-primary);
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .about-content p {
@@ -563,26 +621,6 @@
             display: block;
         }
 
-        /* Instagram Grid */
-        .insta-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .insta-item {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border: 1px solid var(--border-gold);
-            border-radius: 2px;
-            transition: opacity 0.3s ease;
-        }
-
-        .insta-item:hover {
-            opacity: 0.85;
-        }
-
         /* Newsletter */
         .newsletter {
             background-color: var(--bg-card);
@@ -606,7 +644,7 @@
             gap: 10px;
         }
 
-        /* Cart Drawer Slide-out */
+        /* Shopping Cart Drawer */
         .cart-drawer {
             position: fixed;
             top: 0;
@@ -713,7 +751,8 @@
         }
 
         /* Responsive Breakpoints */
-        @media (max-width: 768px) {
+        @media (max-width: 880px) {
+            .contact-wrapper { grid-template-columns: 1fr; padding: 30px 20px; }
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
             .cart-drawer { width: 100%; right: -100%; }
@@ -733,14 +772,14 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo-container">
-                <!-- Inline Luxora Brand Logo SVG matching exact provided branding -->
-                <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Background Curve Accent -->
-                    <path d="M 80 220 C 120 150, 320 140, 340 160 C 360 180, 200 320, 100 310 C 200 380, 380 370, 395 290" 
+                <!-- Luxora by MelBe SVG Logo -->
+                <svg class="logo-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 80 210 C 120 140, 320 130, 340 150 C 360 170, 200 310, 100 300 C 200 370, 380 360, 395 280" 
                           fill="none" stroke="#FFD700" stroke-width="2.5"/>
-                    <path d="M 120 220 L 360 220" stroke="#FFD700" stroke-width="3"/>
-                    <path d="M 120 293 L 360 293" stroke="#FFD700" stroke-width="3"/>
-                    <text x="240" y="272" font-family="'Cormorant Garamond', serif" font-size="68" font-style="italic" font-weight="bold" fill="#FFD700" text-anchor="middle">Luxora</text>
+                    <path d="M 110 210 L 370 210" stroke="#FFD700" stroke-width="3"/>
+                    <path d="M 110 285 L 370 285" stroke="#FFD700" stroke-width="3"/>
+                    <text x="240" y="262" font-family="'Cormorant Garamond', serif" font-size="62" font-style="italic" font-weight="bold" fill="#FFD700" text-anchor="middle">Luxora</text>
+                    <text x="240" y="315" font-family="'Montserrat', sans-serif" font-size="16" font-weight="600" fill="#FFD700" letter-spacing="4" text-anchor="middle">BY MELBE</text>
                 </svg>
             </a>
 
@@ -750,6 +789,7 @@
                 <li><a href="#custom">Custom Gift</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
 
@@ -762,7 +802,7 @@
                     </svg>
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
-                <a href="#custom" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.75rem;">Custom Order</a>
+                <a href="#contact" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.75rem;">Get in Touch</a>
             </div>
         </div>
     </header>
@@ -771,6 +811,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Luxury, Curated With Intention.</h1>
+            <div class="brand-sub">LUXORA BY MELBE</div>
             <p>Discover beautifully curated gift baskets designed to make every occasion unforgettable.</p>
             <div class="hero-buttons">
                 <a href="#collections" class="btn btn-gold">Shop Gift Baskets</a>
@@ -949,6 +990,76 @@
         </div>
     </section>
 
+    <!-- Dedicated Contact Page / Section -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <h2>Let's Create Something Special.</h2>
+            <div class="divider-gold"></div>
+            <p>Have a special request, corporate gifting query, or need help selecting the perfect gift? Our concierge team is here for you.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Left Info Card -->
+            <div class="contact-info-card">
+                <div>
+                    <h3>LUXORA BY MELBE</h3>
+                    <p style="color: var(--gold-light); font-size: 0.95rem; margin-bottom: 30px;">
+                        Where luxury meets thoughtful gifting. Tailored concierge service for personal celebrations & executive accounts.
+                    </p>
+
+                    <div class="info-item">
+                        <label>Concierge Inquiry</label>
+                        <p>concierge@luxorabymelbe.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Phone / Direct</label>
+                        <p>(347) 229-3375</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Service Area</label>
+                        <p>Atlanta Metro Courier & Nationwide White-Glove Shipping</p>
+                    </div>
+                </div>
+
+                <div style="border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 20px; font-size: 0.8rem; color: var(--gold-light);">
+                    Hours: Monday – Saturday • 9:00 AM – 7:00 PM EST
+                </div>
+            </div>
+
+            <!-- Right Direct Contact Form -->
+            <div>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" class="form-control" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" class="form-control" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Inquiry Type</label>
+                        <select required>
+                            <option value="">Select Subject</option>
+                            <option>Custom Gift Request</option>
+                            <option>Corporate & Executive Gifting</option>
+                            <option>Weddings & Event Orders</option>
+                            <option>Order Status Inquiry</option>
+                            <option>General Concierge Question</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message *</label>
+                        <textarea rows="5" class="form-control" required placeholder="How can we help create your ideal gifting experience?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="align-self: flex-start;">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works -->
     <section class="section" id="how-it-works">
         <div class="section-header">
@@ -986,7 +1097,7 @@
         <div class="about-content">
             <h2>The Art of Gifting</h2>
             <p>
-                At Luxora, we believe gifting should be more than simply giving an item. It should create a feeling, celebrate a moment, and make someone feel truly special.
+                At Luxora by MelBe, we believe gifting should be more than simply giving an item. It should create a feeling, celebrate a moment, and make someone feel truly special.
                 <br><br>
                 Every Luxora gift is thoughtfully curated with quality, beauty, and intention. From personal celebrations to corporate appreciation, we transform meaningful moments into unforgettable gifting experiences.
             </p>
@@ -1078,7 +1189,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>LUXORA</h4>
+                <h4>LUXORA BY MELBE</h4>
                 <p style="font-size: 0.85rem; color: var(--gold-light);">Luxury, Curated With Intention.<br>Elevated gifting experiences for life's most meaningful moments.</p>
             </div>
             <div class="footer-col">
@@ -1088,6 +1199,7 @@
                     <li><a href="#occasions">Shop by Occasion</a></li>
                     <li><a href="#custom">Custom Gift Request</a></li>
                     <li><a href="#about">The Art of Gifting</a></li>
+                    <li><a href="#contact">Contact Concierge</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1100,16 +1212,16 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact Us</h4>
+                <h4>Concierge Care</h4>
                 <ul>
-                    <li>Email: concierge@luxora.com</li>
-                    <li>Phone: (800) 555-LUXORA</li>
-                    <li>Lithonia / Atlanta Metro & Nationwide</li>
+                    <li>Email: concierge@luxorabymelbe.com</li>
+                    <li>Phone: (347) 229-3375</li>
+                    <li>Atlanta Metro & Nationwide</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Luxora LLC. All rights reserved. | Luxury Curated Gifting Experience
+            &copy; 2026 Luxora by MelBe LLC. All rights reserved. | www.luxorabymelbe.com
         </div>
     </footer>
 
@@ -1173,7 +1285,13 @@
 
         function handleCustomSubmit(e) {
             e.preventDefault();
-            alert('Thank you for submitting your custom Luxora gift request. Our concierge team will reach out within 24 hours!');
+            alert('Thank you for submitting your custom Luxora by MelBe gift request. Our concierge team will reach out within 24 hours!');
+            e.target.reset();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for contacting Luxora by MelBe. Your message has been sent to our concierge team!');
             e.target.reset();
         }
     </script>
