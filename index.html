@@ -433,52 +433,15 @@
             font-size: 0.82rem;
         }
 
-        /* Dedicated Contact Section / Page */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
+        /* Pure Contact Form Container (No Direct Info Published) */
+        .contact-form-container {
             background-color: var(--bg-card);
             border: 1px solid var(--gold-primary);
             padding: 50px;
             border-radius: 4px;
+            max-width: 850px;
+            margin: 0 auto;
             box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-        }
-
-        .contact-info-card {
-            background-color: var(--text-dark);
-            color: var(--white);
-            padding: 40px 30px;
-            border-radius: 4px;
-            border-top: 3px solid var(--gold-primary);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .contact-info-card h3 {
-            font-size: 2rem;
-            color: var(--gold-primary);
-            margin-bottom: 15px;
-        }
-
-        .info-item {
-            margin-bottom: 25px;
-        }
-
-        .info-item label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--gold-light);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .info-item p {
-            font-size: 1rem;
-            color: var(--white);
-            font-weight: 300;
         }
 
         /* How It Works */
@@ -752,7 +715,7 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 880px) {
-            .contact-wrapper { grid-template-columns: 1fr; padding: 30px 20px; }
+            .contact-form-container { padding: 30px 20px; }
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
             .cart-drawer { width: 100%; right: -100%; }
@@ -789,7 +752,7 @@
                 <li><a href="#custom">Custom Gift</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
 
@@ -802,7 +765,7 @@
                     </svg>
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
-                <a href="#contact" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.75rem;">Get in Touch</a>
+                <a href="#contact" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.75rem;">Inquire Now</a>
             </div>
         </div>
     </header>
@@ -990,73 +953,54 @@
         </div>
     </section>
 
-    <!-- Dedicated Contact Page / Section -->
+    <!-- Clean Contact Inquiry Form (No Personal Info Displayed) -->
     <section class="section" id="contact">
         <div class="section-header">
-            <h2>Let's Create Something Special.</h2>
+            <h2>Let's Create Something Special</h2>
             <div class="divider-gold"></div>
-            <p>Have a special request, corporate gifting query, or need help selecting the perfect gift? Our concierge team is here for you.</p>
+            <p>Have a custom request, corporate gifting question, or need assistance selecting a gift? Leave your details below and our concierge team will reach out directly.</p>
         </div>
 
-        <div class="contact-wrapper">
-            <!-- Left Info Card -->
-            <div class="contact-info-card">
-                <div>
-                    <h3>LUXORA BY MELBE</h3>
-                    <p style="color: var(--gold-light); font-size: 0.95rem; margin-bottom: 30px;">
-                        Where luxury meets thoughtful gifting. Tailored concierge service for personal celebrations & executive accounts.
-                    </p>
-
-                    <div class="info-item">
-                        <label>Concierge Inquiry</label>
-                        <p>concierge@luxorabymelbe.com</p>
-                    </div>
-
-                    <div class="info-item">
-                        <label>Phone / Direct</label>
-                        <p>(347) 229-3375</p>
-                    </div>
-
-                    <div class="info-item">
-                        <label>Service Area</label>
-                        <p>Atlanta Metro Courier & Nationwide White-Glove Shipping</p>
-                    </div>
-                </div>
-
-                <div style="border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 20px; font-size: 0.8rem; color: var(--gold-light);">
-                    Hours: Monday – Saturday • 9:00 AM – 7:00 PM EST
-                </div>
-            </div>
-
-            <!-- Right Direct Contact Form -->
-            <div>
-                <form id="contactForm" onsubmit="handleContactSubmit(event)" style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="contact-form-container">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="form-grid" style="margin-bottom: 0;">
                     <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" class="form-control" required placeholder="Your Name">
+                        <label>Your Name *</label>
+                        <input type="text" class="form-control" required placeholder="Full Name">
                     </div>
                     <div class="form-group">
                         <label>Email Address *</label>
                         <input type="email" class="form-control" required placeholder="your.email@example.com">
                     </div>
+                </div>
+
+                <div class="form-grid" style="margin-bottom: 0;">
                     <div class="form-group">
-                        <label>Inquiry Type</label>
+                        <label>Phone Number (Optional)</label>
+                        <input type="tel" class="form-control" placeholder="(555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label>Inquiry Topic</label>
                         <select required>
-                            <option value="">Select Subject</option>
+                            <option value="">Select Topic</option>
                             <option>Custom Gift Request</option>
                             <option>Corporate & Executive Gifting</option>
                             <option>Weddings & Event Orders</option>
-                            <option>Order Status Inquiry</option>
-                            <option>General Concierge Question</option>
+                            <option>Order Inquiry</option>
+                            <option>General Question</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>Your Message *</label>
-                        <textarea rows="5" class="form-control" required placeholder="How can we help create your ideal gifting experience?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-gold" style="align-self: flex-start;">Send Inquiry</button>
-                </form>
-            </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How Can We Help You? *</label>
+                    <textarea rows="5" class="form-control" required placeholder="Tell us about what you need or what occasion you are celebrating..."></textarea>
+                </div>
+
+                <div style="text-align: center; margin-top: 10px;">
+                    <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 300px;">Submit Inquiry</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -1152,7 +1096,7 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">Do you ship nationwide and offer local delivery? <span>+</span></button>
-                <div class="faq-answer">We offer nationwide shipping across the US as well as white-glove local courier delivery for select metropolitan areas.</div>
+                <div class="faq-answer">We offer nationwide shipping across the US as well as local delivery services for select metropolitan areas.</div>
             </div>
         </div>
     </section>
@@ -1212,11 +1156,10 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Concierge Care</h4>
+                <h4>Customer Care</h4>
                 <ul>
-                    <li>Email: concierge@luxorabymelbe.com</li>
-                    <li>Phone: (347) 229-3375</li>
-                    <li>Atlanta Metro & Nationwide</li>
+                    <li><a href="#contact" style="color: var(--gold-light); text-decoration: underline;">Submit Concierge Inquiry</a></li>
+                    <li style="margin-top: 8px;">Nationwide Service</li>
                 </ul>
             </div>
         </div>
@@ -1291,7 +1234,7 @@
 
         function handleContactSubmit(e) {
             e.preventDefault();
-            alert('Thank you for contacting Luxora by MelBe. Your message has been sent to our concierge team!');
+            alert('Thank you for contacting Luxora by MelBe. Your inquiry has been received, and our concierge team will be in touch with you shortly!');
             e.target.reset();
         }
     </script>
